@@ -42,8 +42,13 @@ public class Sever {
 	}
 
 	public void chooseMoto() {
+		String[]carType={"宝马","别克商务","别克林荫大道"};
+		int[]busType={10,32};
+		System.out.println("想租几辆车：");
+		int n=input.nextInt();
+		int m=0;
 		//选择租车类型
-		String yn=null;
+		
 		do{
 		System.out.print("请选择租车类型：1.轿车 2.客车  ");
 		int type = input.nextInt();
@@ -67,10 +72,10 @@ public class Sever {
 			System.out.println("租车人"+"\t"+"租车类型"+"\t"+"车型"+"\t"+"天数"+"\t"+"费用");
 			System.out.println(name+"\t"+"客车"+"\t"+bus.getMotoType()+"\t"+getDays()+"\t"+getDays()*bus.getRent());
 		}
-		System.out.print("继续租车么？（y/n） ");
-		yn=input.next();
-		}while(yn.equals("y"));
-		if(yn.equals("n")){
+		
+		m=m+1;
+		}while(m!=n);
+		if(m==n){
 			System.out.println("感谢使用！");
 		}
 		

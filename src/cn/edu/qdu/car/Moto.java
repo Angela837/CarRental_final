@@ -1,28 +1,30 @@
 package cn.edu.qdu.car;
 
 public abstract class Moto {
-	private String motoType;
-	private int rent;
+	private String MotoNo;
+	private double fee;
 	
-	public abstract void chooseType();
-	public abstract void dayRent();
-
-	public String getMotoType() {
-		return motoType;
-	}
-
-	public void setMotoType(String motoType) {
-		this.motoType = motoType;
-	}
-
-	public int getRent() {
-		return rent;
-	}
-
-	public void setRent(int rent) {
-		this.rent = rent;
-	}
 	
+	public Moto(String MotoNo){
+		this.setMotoNo(MotoNo);
+	}
+	public double rentFee(int day){
+		return day*fee;
+	}
+
+
+	public String getMotoNo() {
+		return MotoNo;
+	}
+	public void setMotoNo(String motoNo) {
+		MotoNo = motoNo;
+	}
+	public double getFee() {
+		return fee;
+	}
+	public void setFee(double fee) {
+		this.fee = fee;
+	}
 		
 	
 }
