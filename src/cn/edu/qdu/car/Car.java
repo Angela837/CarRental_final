@@ -13,10 +13,13 @@ public class Car extends Moto {
 
 		if (type.equals("宝马")) {
 			setFee(500);
-		} else if (type.equals("别克商务")) {
+			setTypes("宝马");
+		} else if (type.equals("奔驰")) {
 			setFee(600);
+			setTypes("奔驰");
 		} else {
 			setFee(400);
+			setTypes("奥迪");
 		}
 
 		return super.rentFee(day);
