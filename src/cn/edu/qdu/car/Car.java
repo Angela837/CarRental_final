@@ -13,13 +13,13 @@ public class Car extends Moto {
 
 		if (type.equals("±¦Âí")) {
 			setFee(500);
-			setTypes("±¦Âí");
+			setType("±¦Âí");
 		} else if (type.equals("±¼³Û")) {
 			setFee(600);
-			setTypes("±¼³Û");
+			setType("±¼³Û");
 		} else {
 			setFee(400);
-			setTypes("°ÂµÏ");
+			setType("°ÂµÏ");
 		}
 
 		return super.rentFee(day);

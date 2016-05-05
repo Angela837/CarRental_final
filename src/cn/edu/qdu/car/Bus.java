@@ -4,6 +4,7 @@ package cn.edu.qdu.car;
 
 public class Bus extends Moto {
 private int seatCount;
+private String Types;
 	public Bus(String MotoNo) {
 		super(MotoNo);
 		
@@ -23,6 +24,12 @@ private int seatCount;
 	}
 	public void setSeatCount(int seatCount) {
 		this.seatCount = seatCount;
+	}
+	public String getTypes() {
+		return Types;
+	}
+	public void setTypes(String string) {
+		this.Types = string;
 	}
 
 

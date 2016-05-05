@@ -29,12 +29,6 @@ public class Sever {
 		// 请租车人输入姓名
 		System.out.print("请输入您的名字：");
 		name = input.next();
-		// 请租车人输入身份证号码
-		//System.out.print("请输入您的身份证号码：");
-		//setId(input.next());
-		// 请租车人输入手机号码
-		//System.out.print("请输入您的手机号码：");
-		//setPhoneNumber(input.next());
 
 	}
 
@@ -72,7 +66,7 @@ public class Sever {
 
 				// 所需费用
 				totalFee[m] = moto.rentFee(days[m]);
-				types[m]=moto.getTypes();
+				types[m]=car.getType();
 			} else {
 				Moto moto = new Bus("鲁 B66666");
 				System.out.print("请选择客车类型：1.>16座  2.<=16座   ");
@@ -86,7 +80,7 @@ public class Sever {
 
 				// 所需费用
 				totalFee[m] = moto.rentFee(days[m]);
-				types[m]=moto.getTypes();
+				types[m]=bus.getTypes();
 				
 			}
 
