@@ -4,8 +4,9 @@ public class Car extends Moto {
 
 	private String type;
 
-	public Car(String MotoNo) {
+	public Car(String MotoNo,String type) {
 		super(MotoNo);
+		this.type=type;
 
 	}
 
@@ -13,13 +14,13 @@ public class Car extends Moto {
 
 		if (type.equals("±¦Âí")) {
 			setFee(500);
-			setType("±¦Âí");
+			
 		} else if (type.equals("±¼³Û")) {
 			setFee(600);
-			setType("±¼³Û");
+			
 		} else {
 			setFee(400);
-			setType("°ÂµÏ");
+			
 		}
 
 		return super.rentFee(day);

@@ -28,7 +28,7 @@ public class Sever {
 	public void register() {
 		// 请租车人输入姓名
 		System.out.print("请输入您的名字：");
-		name = input.next();
+		setName(input.next());
 
 	}
 
@@ -40,7 +40,7 @@ public class Sever {
 		int n = input.nextInt();//租几辆车就循环几次
 		
 		int[] days = new int[n];// 租用天数
-		int[] type = new int[n];
+		int[] type = new int[n];//选择车型
 		String[] types = new String[n];
 
 		int m = 0;
@@ -52,13 +52,13 @@ public class Sever {
 			System.out.print("请选择租车类型：1.轿车 2.客车  ");
 			type[m] = input.nextInt();
 			if (type[m] == 1) {
-				Moto moto = new Car("鲁 B88888");
+				Moto moto = new Car("鲁 B88888",carType[type[m] - 1]);
 				
 				//选择轿车车型
 				System.out.print("请选择轿车类型：1.宝马 2.奔驰 3.奥迪   ");
 				type[m] = input.nextInt();
-				Car car = (Car) moto;// 将moto强制类型转换成Car类对象
-				car.setType(carType[type[m] - 1]);// 调用Car类特有方法setType（）
+				//Car car = (Car) moto;// 将moto强制类型转换成Car类对象
+				//car.setType(carType[type[m] - 1]);// 调用Car类特有方法setType（）
 				
 				// 选择租车天数
 				System.out.print("请输入您想租的天数：");
@@ -66,9 +66,9 @@ public class Sever {
 
 				// 所需费用
 				totalFee[m] = moto.rentFee(days[m]);
-				types[m]=car.getType();
+				types[m]=carType[type[m] - 1];
 			} else {
-				Moto moto = new Bus("鲁 B66666");
+				Moto moto = new Bus("鲁 B66666",busType[type[m] - 1]);
 				System.out.print("请选择客车类型：1.>16座  2.<=16座   ");
 				type[m] = input.nextInt();
 				Bus bus = (Bus) moto;// 将moto强制类型转换成Bus类对象
@@ -114,6 +114,14 @@ public class Sever {
 
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 }
